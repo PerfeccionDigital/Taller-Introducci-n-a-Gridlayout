@@ -5,6 +5,7 @@
     align-items: center;
     color: #000;
     background-repeat: no-repeat;
+    background-color: yellow;
 }
 .titulo{
     font-size: 35px;
@@ -20,25 +21,24 @@
 
 /*
 CONTENEDOR PADRE
-grid-template-columns
-    - Indica cantidad de columnas en la grilla.
-    - Da el tamaño de cada columna en la grilla.
 
-grid-template-rows
-    - Indica cantidad de filas en la grilla.
-    - Da el tamaño de cada fila en la grilla.
+Medidas :
+FR      =   Son las ' n ' fracciones del espacio disponibles después de establecer las medidas fijas.
 
-grid-template
-    - Indica la cantidad de filas y columnas a la vez
-    (filas / columnas)
-    ejm : grid-template : 100px 50px / 40px 20px
+AUTO    =   Toma el espacio faltante,si hubiera. 
+            Siempre es el espacio de su contenido.
+
+Propiedades como "grid-template-columns" y "grid-template-rows" las usan.
+
 */
 
 .grid-container{
-    display: inline-grid;
-    /*grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 90px 100px;*/
-    grid-template : 100px 100px 50px / 100px 80px 100px 
+    width: 100%;
+    height: 400px;
+
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-rows: 100px 100px 1fr;
 }
 
 
