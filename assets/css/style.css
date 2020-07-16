@@ -21,11 +21,15 @@ body{
 /*
 CONTENEDOR PADRE
 display : grid
-
+- Se aplica al elemento PADRE
+- GRID indica que el elemento se vuelve una grilla o cuadricula 
+  y sus elemntos hijos se vuelven celdas de esa cuadricula.
+- Al usar Grid por defecto te da una columna.
 */
 .grid-container{
     display: grid;
 }
+
 
 .grid-item{
     display: flex;
