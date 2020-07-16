@@ -20,27 +20,57 @@
 }
 
 
-/* 
-PADRE 
-
-Fucnión REPEAT() :
-    Función usada para la repetición de medidas en las filas o columnas.
-    Recibe 2 parámetros : 
-        1° cantidad de veces a repetirse(fila o columna)
-        2° medidas para las filas o columnas a repetirse                        
-*/
+/* PADRE */
 .grid-container{
+    margin-top: 20px;
     display: grid;    
+    grid-template-columns: 200px 200px 1fr;
+    grid-template-rows: 100px 100px 100px; 
+    
     column-gap: 20px;
     row-gap: 10px;
-
-    grid-template-columns: 200px 200px 200px 200px;
-    /*grid-template-columns: repeat(2 , 200px 400px);*/
-    grid-template-rows: 100px 100px 100px;
-    /*grid-template-rows: repeat(2, 100px 150px);*/  
 }
 
+
+/*
+CONTENEDOR HIJO
+
+grid-column-start : 
+    Indica en qué column-grid empieza el elemento.
+grid-column-end : 
+    Indica en qué column-grid termina el elemento.
+grid-column : (shortcut)
+    Indicas el inicio y final del elemento en el column-grid.
+
+grid-row-start :
+    Indica en qué row-grid empieza el elemento.
+grid-row-end :
+    Indica en qué row-grid termina el elemento.
+grid-row : (shortcut)
+    Indicas el inicio y final del elemento en el row-grid.
+
+*/
 .grid-item{
     border: solid 1px;
     font-size: 18px;
+}
+
+.grid-item:nth-child(3){
+    background-color: green;
+    color: yellow;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.grid-item:nth-child(6){
+    background-color: orange;
+    color: blue;
+
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
