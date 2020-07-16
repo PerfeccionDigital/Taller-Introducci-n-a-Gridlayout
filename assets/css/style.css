@@ -22,31 +22,31 @@
 /*
 CONTENEDOR PADRE
 
-Medidas :
-FR      =   Son las ' n ' fracciones del espacio disponibles después de establecer las medidas fijas.
+column-gap : da espacio solo entre columnas.
 
-AUTO    =   Toma el espacio faltante,si hubiera. 
-            Siempre es el espacio de su contenido.
+row-gap : da espacio solo entre filas.
 
-Propiedades como "grid-template-columns" y "grid-template-rows" las usan.
+gap : da el mismo espacio entre filas y columnas
 
+
+Forma antigua :
+    grid-column-gap : <line-size>;
+    grid-row-gap    : <line-size>;
 */
 
 .grid-container{
-    width: 100%;
-    height: 400px;
+    display: grid;    
+    grid-template-columns: 200px 200px 1fr;
+    grid-template-rows: 50% 50% 100%; 
+    
+    column-gap: 20px;
+    row-gap: 10px;
+    /*gap: 20px;*/
 
-    display: grid;
-    grid-template-columns: 100px 1fr 1fr;
-    grid-template-rows: 100px 100px 1fr;
 }
 
 
 .grid-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: solid 1px;
     font-size: 18px;
-    /*padding: 20px;*/
 }
