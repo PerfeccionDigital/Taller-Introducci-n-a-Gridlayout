@@ -19,32 +19,26 @@
     color: #000;
 }
 
-/*
-CONTENEDOR PADRE
 
-column-gap : da espacio solo entre columnas.
+/* 
+PADRE 
 
-row-gap : da espacio solo entre filas.
-
-gap : da el mismo espacio entre filas y columnas
-
-
-Forma antigua :
-    grid-column-gap : <line-size>;
-    grid-row-gap    : <line-size>;
+Fucnión REPEAT() :
+    Función usada para la repetición de medidas en las filas o columnas.
+    Recibe 2 parámetros : 
+        1° cantidad de veces a repetirse(fila o columna)
+        2° medidas para las filas o columnas a repetirse                        
 */
-
 .grid-container{
     display: grid;    
-    grid-template-columns: 200px 200px 1fr;
-    grid-template-rows: 50% 50% 100%; 
-    
     column-gap: 20px;
     row-gap: 10px;
-    /*gap: 20px;*/
 
+    grid-template-columns: 200px 200px 200px 200px;
+    /*grid-template-columns: repeat(2 , 200px 400px);*/
+    grid-template-rows: 100px 100px 100px;
+    /*grid-template-rows: repeat(2, 100px 150px);*/  
 }
-
 
 .grid-item{
     border: solid 1px;
