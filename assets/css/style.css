@@ -1,3 +1,7 @@
+body{
+    margin: 0 auto;
+}
+
 .main_container{
     display: flex;
     flex-direction: column;
@@ -20,57 +24,77 @@
 }
 
 
-/* PADRE */
+/* CONTENEDOR PADRE */
 .grid-container{
+    height: 600px;
+    background-color: red;
     margin-top: 20px;
     display: grid;    
-    grid-template-columns: 200px 200px 1fr;
+    grid-template-columns: 100px 100px 100px 100px;
     grid-template-rows: 100px 100px 100px; 
-    
     column-gap: 20px;
     row-gap: 10px;
+    
+    /* ALINEACION de cuadriculas EN COLUMNAS : start | end | center | stretch | space-around | space-between | space-evenly;  */
+    justify-content: center; 
+
+    /* ALINEACION de cuadriculas EN FILAS :  align-content: start | end | center | stretch | space-around | space-between | space-evenly; */
+    align-content: space-around; 
 }
 
 
-/*
-CONTENEDOR HIJO
-
-grid-column-start : 
-    Indica en qué column-grid empieza el elemento.
-grid-column-end : 
-    Indica en qué column-grid termina el elemento.
-grid-column : (shortcut)
-    Indicas el inicio y final del elemento en el column-grid.
-
-grid-row-start :
-    Indica en qué row-grid empieza el elemento.
-grid-row-end :
-    Indica en qué row-grid termina el elemento.
-grid-row : (shortcut)
-    Indicas el inicio y final del elemento en el row-grid.
-
-*/
 .grid-item{
     border: solid 1px;
+    border-radius: 10px;
     font-size: 18px;
 }
 
-.grid-item:nth-child(3){
-    background-color: green;
-    color: yellow;
 
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+.grid-item:first-child{
+    background-image: url('../img/img01.jpg');
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.grid-item:nth-child(2){
+    background-image: url('../img/img02.jpg');
+    background-position: bottom;
+
+}
+.grid-item:nth-child(3){
+    background-image: url('../img/img03.jpg');
+    background-position: bottom;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+.grid-item:nth-child(4){
+    background-image: url('../img/img04.jpg');
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+.grid-item:nth-child(5){
+    background-image: url('../img/img05.jpg');
+
 }
 
 .grid-item:nth-child(6){
-    background-color: orange;
-    color: blue;
+    background-image: url('../img/img06.jpg');
+    background-position: bottom;
+}
 
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+.grid-item:nth-child(7){
+    background-image: url('../img/img07.jpg');
+
+}
+
+.grid-item:last-child{
+    background-image: url('../img/img08.jpg');
+    background-position: bottom;
+
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
 }
