@@ -4,12 +4,12 @@ Video del taller: https://youtu.be/XiA-jpQXZZY
 
 
 El proyecto se encuentra versionado con Git. <br>
-Cambie entre ramas para ver el ejemplo y la explicacion de los comandos dictados en el taller.
+Cambie entre tags(commits) para ver el ejemplo y la explicacion de los comandos dictados en el taller.
 
 <br>
 
 Tambien podrá descargar el ejemplo y explicación de cada comando por separado en la siguiente lista. <br>
-Sólo ingrese al link debajo del titulo de cada comando y será redireccionado al ejemplo para poder descargar el proyecto.
+Sólo ingrese al link debajo del titulo de cada comando y será redireccionado al ejemplo para poder descargarlo.
 
 ## 1. display grid
 [display grid](https://github.com/PerfeccionDigital/Workshop-Introduccion-a-Gridlayout/tree/1.displaygrid)
